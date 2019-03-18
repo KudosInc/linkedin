@@ -89,7 +89,7 @@ module LinkedIn
       # @macro share_input_fields
       # @return [void]
       def add_share(share)
-        path = "/people/~/shares"
+        path = "/ugcPosts"
         defaults = {:visibility => {:code => "anyone"}}
         post(path, MultiJson.dump(defaults.merge(share)), "Content-Type" => "application/json")
       end

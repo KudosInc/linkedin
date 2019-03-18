@@ -45,9 +45,8 @@ module LinkedIn
           path += "/url=#{CGI.escape(url)}"
         elsif email = options.delete(:email)
           path += "::(#{email})"
-        else
-          path += "/~"
         end
+        path
       end
 
       def company_path(options)
